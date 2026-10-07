@@ -1,0 +1,10 @@
+test:
+    python -m pytest -q
+
+run separator url *args:
+    python http_headers_scanner.py {{url}} {{args}}
+
+lint:
+    python -m ruff check http_headers_scanner.py test_http_headers_scanner.py
+    python -m mypy --strict http_headers_scanner.py
+    python -m pylint http_headers_scanner.py
